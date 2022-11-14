@@ -9,10 +9,7 @@ public class ObesityInfo extends StandardWeightInfo {
 	}
 	
 	public void getInformation() {
-		System.out.println("이름: " + name + "신장:" +height + "몸무게:"+weight +"비만정도"+getObesity());
-	}
-	public double getObesity() {
-		Obesity = ((weight - getStandardWeight())/getStandardWeight() * 100);
+		System.out.println("이름: " + name + "신장:" +height + "몸무게:"+weight +"비만정도"+getObesity()+"입니다.");
 		if(Obesity <= 18.5) {
 			System.out.println("저체중");
 		}else if(Obesity <=22.9) {
@@ -24,6 +21,10 @@ public class ObesityInfo extends StandardWeightInfo {
 		}else {
 			System.out.println("고도비만");
 		}
+	}
+	public double getObesity() {
+		Obesity = ((weight - getStandardWeight())/getStandardWeight() * 100);
+		
 		return Obesity;
 	}
 
